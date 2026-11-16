@@ -13,12 +13,12 @@
   --sand-100: #efe2cc;
   --sand-200: #e2cfae;
   --sand-300: #cfb084;
-  --gold: #eab562;
-  --sun: #ff9e45;
-  --bgv: #0c6f67;
-  --bgv-hot: #3fd3c1;
-  --bgv-deep: #0a5750;
-  --sea: #2fb8b2;
+  --gold: #c49a5c;
+  --sun: #d4845a;
+  --bgv: #1a5c50;
+  --bgv-hot: #2d9b87;
+  --bgv-deep: #14473d;
+  --sea: #498e87;
   --ink: #1b1511;
   --body: #4a3f36;
   --muted: #74675b;
@@ -27,7 +27,7 @@
   --line-light: rgba(251, 246, 238, .14);
   --on-dark: rgba(251, 246, 238, .94);
   --on-dark-muted: rgba(251, 246, 238, .64);
-  --dest: #ffb547;
+  --dest: #c49a5c;
   --font-display: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
   --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
   --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -83,10 +83,10 @@ h2 em, .display em, h3 em { font-family: var(--font-serif); font-style: italic; 
 .btn:hover .ico { transform: translateX(4px) }
 .btn-lg { min-height: 58px; padding: 16px 30px; font-size: 16px }
 .btn-sm { min-height: 42px; padding: 10px 18px; font-size: 14px }
-.btn-glow, .btn-solid, .btn-primary { color: #fff; background: linear-gradient(180deg, #149488 0%, #0e7a71 52%, #0a6159 100%); border-color: rgba(4, 60, 55, .35); box-shadow: 0 14px 32px -14px rgba(10, 97, 89, .85), inset 0 1px 0 rgba(255, 255, 255, .25) }
-.btn-glow::before, .btn-solid::before, .btn-primary::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, .3) 50%, transparent 70%); transform: translateX(-120%); transition: transform .9s var(--ease) }
-.btn-glow:hover, .btn-solid:hover, .btn-primary:hover { color: #fff; background: linear-gradient(180deg, #19a598 0%, #108579 50%, #0b675f 100%); box-shadow: 0 22px 44px -14px rgba(20, 160, 145, .75), inset 0 1px 0 rgba(255, 255, 255, .3); transform: translateY(-2px) }
-.btn-glow:hover::before, .btn-solid:hover::before, .btn-primary:hover::before { transform: translateX(120%) }
+.btn-glow, .btn-solid, .btn-primary { color: #fff; background: var(--bgv); border-color: var(--bgv-deep); box-shadow: 0 4px 12px -4px rgba(20, 71, 61, .35) }
+.btn-glow::before, .btn-solid::before, .btn-primary::before { content: none }
+.btn-glow:hover, .btn-solid:hover, .btn-primary:hover { color: #fff; background: var(--bgv-deep); box-shadow: 0 6px 16px -6px rgba(20, 71, 61, .45) }
+.btn-glow:hover::before, .btn-solid:hover::before, .btn-primary:hover::before { /* removed */ }
 .btn-glass { color: var(--cream); background: rgba(251, 246, 238, .1); border-color: rgba(251, 246, 238, .28); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px) }
 .btn-glass:hover { background: rgba(251, 246, 238, .2); border-color: rgba(251, 246, 238, .5) }
 .btn-outline { color: var(--ink); background: transparent; border-color: var(--line-strong) }
@@ -122,7 +122,7 @@ h2 em, .display em, h3 em { font-family: var(--font-serif); font-style: italic; 
 
 /* ---------- Progreso de lectura ---------- */
 .scroll-progress { position: fixed; inset: 0 0 auto; z-index: 90; height: 3px; pointer-events: none }
-.scroll-progress span { display: block; height: 100%; background: linear-gradient(90deg, var(--dest), var(--bgv-hot)); transform: scaleX(0); transform-origin: left; transition: background .8s var(--ease) }
+.scroll-progress span { display: block; height: 100%; background: linear-gradient(90deg, var(--bgv-deep), var(--bgv)); transform: scaleX(0); transform-origin: left; transition: background .8s var(--ease) }
 
 /* ---------- Encabezado flotante ---------- */
 .site-head { position: fixed; top: 14px; left: 0; right: 0; z-index: 80; color: var(--cream); pointer-events: none; transition: transform .55s var(--ease) }
@@ -149,7 +149,7 @@ h2 em, .display em, h3 em { font-family: var(--font-serif); font-style: italic; 
 .head-plan { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 0; border-radius: 999px; background: none; color: var(--cream); font-size: 14px; font-weight: 500; transition: background .3s var(--ease) }
 .head-plan:hover { background: rgba(251, 246, 238, .1) }
 .head-plan .ico { width: 18px; height: 18px }
-.count-badge { display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding-inline: 6px; border-radius: 999px; background: var(--gold); color: var(--ink); font-size: 11px; font-weight: 700; line-height: 1 }
+.count-badge { display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding-inline: 6px; border-radius: 999px; background: var(--bgv); color: #fff; font-size: 11px; font-weight: 700; line-height: 1 }
 .count-badge.bump { animation: bump .5s var(--ease) }
 @keyframes bump { 40% { transform: scale(1.35) } }
 .menu-btn { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 6px; width: 46px; height: 46px; padding: 0; border: 1px solid rgba(251, 246, 238, .2); border-radius: 50%; background: rgba(251, 246, 238, .08); color: var(--cream); position: relative; z-index: 3 }
@@ -219,10 +219,10 @@ h2 em, .display em, h3 em { font-family: var(--font-serif); font-style: italic; 
 .hero-scroll { position: absolute; left: 50%; bottom: 84px; z-index: 2; display: none; flex-direction: column; align-items: center; gap: 10px; transform: translateX(-50%); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--on-dark-muted) }
 .hero-scroll i { display: block; width: 1px; height: 46px; background: linear-gradient(var(--cream), transparent); animation: scrollCue 2s var(--ease-io) infinite }
 @keyframes scrollCue { 0% { transform: scaleY(0); transform-origin: top } 45% { transform: scaleY(1); transform-origin: top } 55% { transform: scaleY(1); transform-origin: bottom } 100% { transform: scaleY(0); transform-origin: bottom } }
-.hero[data-dest="huacachina"] { --dest: #ffb547 }
-.hero[data-dest="paracas"] { --dest: #4fd8d0 }
-.hero[data-dest="nasca"] { --dest: #ff8f5c }
-.hero[data-dest="ica"] { --dest: #c8a6ff }
+.hero[data-dest="huacachina"] { --dest: #c49a5c }
+.hero[data-dest="paracas"] { --dest: #498e87 }
+.hero[data-dest="nasca"] { --dest: #c4785a }
+.hero[data-dest="ica"] { --dest: #8b7db0 }
 
 /* Intro coreografiada */
 .intro .hero-top, .intro .hero-bottom, .intro .hero-dests, .intro .hero-line, .intro .hero-place { opacity: 0 }
@@ -435,7 +435,7 @@ h2 em, .display em, h3 em { font-family: var(--font-serif); font-style: italic; 
 .route-chips { position: absolute; top: 18px; left: 18px; z-index: 2; display: flex; flex-wrap: wrap; gap: 8px; pointer-events: none }
 .chip { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 6px 13px; border-radius: 999px; font-size: 13px; font-weight: 600; line-height: 1.2 }
 .chip-glass { color: var(--cream); background: rgba(14, 12, 11, .38); border: 1px solid rgba(251, 246, 238, .3); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px) }
-.chip-live { color: var(--ink); background: var(--gold) }
+.chip-live { color: var(--ink); background: #fff; border: 1px solid var(--line) }
 .chip-live i { width: 7px; height: 7px; border-radius: 50%; background: #12a150; box-shadow: 0 0 0 3px rgba(18, 161, 80, .25); animation: blink 1.6s ease-in-out infinite }
 @keyframes blink { 50% { opacity: .35 } }
 .route-index { position: absolute; right: 22px; bottom: 6px; z-index: 2; font-family: var(--font-display); font-size: clamp(56px, 6vw, 96px); font-weight: 800; font-stretch: 75%; line-height: 1; letter-spacing: -.05em; color: transparent; -webkit-text-stroke: 1.4px rgba(251, 246, 238, .85); pointer-events: none }

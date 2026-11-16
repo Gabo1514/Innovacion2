@@ -124,17 +124,17 @@
 .review-card h3 { font-size: 24px; margin-bottom: 16px; min-height: 53px; }
 .review-card > p { color: var(--text-muted); font-size: 11px; line-height: 1.9; min-height: 70px; }
 .review-author { display: flex; gap: 10px; align-items: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 9px; font-weight: 600; }
-.avatar { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 50%; color: var(--bougainvillea); background: #f3e6ec; font-family: var(--font-display); font-size: 14px; font-weight: 500; }
+.avatar { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 50%; color: var(--bougainvillea); background: #eaf1ed; font-family: var(--font-display); font-size: 14px; font-weight: 500; }
 .review-author small { display: block; color: var(--text-dim); font-size: 8px; font-weight: 400; margin-top: 2px; }
 .review-source { margin-top: 20px; font-size: 9px; color: var(--text-dim); }
 .closing-section { padding-top: 0; }
-.cta-band { background: #8a214e; color: #fff; border-radius: 7px; padding: 53px 55px; display: flex; align-items: center; justify-content: space-between; gap: 45px; position: relative; overflow: hidden; isolation: isolate; }
-.cta-band .eyebrow { color: #f0c5d7; font-size: 8px; }
+.cta-band { background: #1a5c50; color: #fff; border-radius: 7px; padding: 53px 55px; display: flex; align-items: center; justify-content: space-between; gap: 45px; position: relative; overflow: hidden; isolation: isolate; }
+.cta-band .eyebrow { color: #c4e1da; font-size: 8px; }
 .cta-band h2 { font-size: 43px; font-weight: 400; line-height: 1.16; }
-.cta-band p { color: #f0d3df; font-size: 11px; max-width: 425px; margin-top: 17px; }
+.cta-band p { color: #d1e5e0; font-size: 11px; max-width: 425px; margin-top: 17px; }
 .cta-actions { display: flex; flex-direction: column; align-items: stretch; gap: 12px; flex-shrink: 0; }
 .cta-actions .btn { font-size: 11px; min-width: 228px; }
-.dune-lines { position: absolute; z-index: -1; color: #d17a9d; opacity: .2; width: 650px; height: 420px; right: -50px; bottom: -70px; }
+.dune-lines { position: absolute; z-index: -1; color: #78a89e; opacity: .25; width: 650px; height: 420px; right: -50px; bottom: -70px; }
 @media (min-width: 1500px) { .hero-media { height: 535px; } }
 @media (max-width: 1120px) {
   .hero-grid { gap: 30px; }
